@@ -1,6 +1,7 @@
 body {background-image: url("../imagenes/fondo.jpg");
     font-family: Arial, Helvetica, sans-serif;
-    color: #f1f1f1;
+    color: white;
+    
 }
 * {box-sizing: border-box}
 
@@ -77,6 +78,6 @@ button:hover {
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
-     width: 100%;
+    width: 100%;
   }
 }
