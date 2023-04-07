@@ -28,6 +28,18 @@ body {
     color: powderblue;
 }
 
+.main p{
+    font-size: 20px;
+    color: white;
+}
+
+.main h2 {
+    font-size: 30px;
+    color: white;
+}
+
+
+
 /* Header/logo Title */
 .header {
     margin-top: 0%;
@@ -132,8 +144,44 @@ body {
     background-position: center;
     background-size: cover;
 
+}
+
+.fakeimg3 {
+    background-color: #aaa;
+    height: 200px;
+    background-image: url(../imagenes/alianzawow.png);
+    background-position: center;
+    background-size: cover;
 
 }
+
+.fakeimg4 {
+    background-color: #aaa;
+    height: 200px;
+    background-image: url(../imagenes/hordawow.png);
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.fakeimg5 {
+    background-color: #aaa;
+    height: 200px;
+    background-image: url(../imagenes/aliado1.png);
+    background-position: center;
+    background-size: cover;
+
+
+}
+.fakeimg6 {
+    background-color: #aaa;
+    height: 200px;
+    background-image: url(../imagenes/aliado2.png);
+    background-position: center;
+    background-size: cover;
+}
+
 
 /* Footer */
 .footer {
