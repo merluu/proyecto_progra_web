@@ -8,7 +8,7 @@
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     
-    <title>Carrito</title>
+    <title>Producto - agregar</title>
 </head>
 
 <style>body 
@@ -55,44 +55,30 @@
   <hr>
 
   <div class="container">
-    <div class="row">
-      <div class="col-8">
-        <h4 style="color: white">Carro</h4>
-        <ol class="list-group list-group-numbered">
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Subheading</div>
-              Cras justo odio
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Subheading</div>
-              Cras justo odio
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-              <div class="fw-bold">Subheading</div>
-              Cras justo odio
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-          </li>
-        </ol>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-header">
-            <h5>Resumen de la compra</h5>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Productos: 5 (unds)</p>
-            <p class="card-text"><b>Total: </b>$25.990</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
+    <h4 style="color: white;">Agregar Producto</h4>
+    <div class="row" style="background-color: white;">
+      <div style="padding-top: 10px; padding-bottom: 10px">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre del producto" value="SONIC-2">
         </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Año</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Año de creacion">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Precio del producto">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Subir imagen del producto</label>
+          <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="archivo">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <a href="#" class="btn btn-primary">Agregar Producto</a>
       </div>
     </div>
   </div>
