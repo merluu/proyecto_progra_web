@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <title>Producto - editar</title>
+</head>
+
+<style>body 
+{
+  background-image: url("../imagenes/fondo.jpg");
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
+        <label class="form-check-label" for="logo">Gameflix</label>
+      </a>
+    </div>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
+      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Juegos</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <hr>
+
+  <div class="container">
+    <h4 style="color: white;">Editar Producto</h4>
+    <div class="row" style="background-color: white;">
+      <div style="padding-top: 10px; padding-bottom: 10px">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" value="001" disabled="true">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre del producto" value="SONIC-2">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Año</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Año de creacion">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Precio del producto">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Subir imagen del producto</label>
+          <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="archivo">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <a href="#" class="btn btn-primary">Editar Producto</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
