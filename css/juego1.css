@@ -204,7 +204,21 @@ body {
         float: none;
         width: 100%;
     }
+
+    .fakeimg5{
+       
+        width: 50%;
+        height: 50%;
+    }
+    .fakeimg6{
+        
+        width: 50%;
+        height: 50%;
+    }
+
+
 }
+
 
 .comprarbtn {
     padding: 14px 20px;

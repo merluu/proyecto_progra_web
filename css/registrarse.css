@@ -7,6 +7,8 @@ body {background-image: url("../imagenes/fondo.jpg");
 }
 * {box-sizing: border-box}
 
+
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -65,10 +67,16 @@ button:hover {
   width: 50%;
 }
 
+.container-fluid{
+  margin-top: 0%;
+}
+
 /* Add padding to container elements */
 .container {
   padding: 16px;
 }
+
+.
 
 /* Clear floats */
 .clearfix::after {
