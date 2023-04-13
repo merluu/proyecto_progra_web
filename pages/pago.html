@@ -18,6 +18,58 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand .clearfix" href="#">
+                <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> Gameflix
+                <label class="" forform-check-label="logo"> </label>
+            </a>
+        </div>
+        <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+            title="carrito de compras">
+            <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+            title="Inicia Sesión">
+            <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm bg-danger navbar-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #fff ">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="../pages/cartelera.html" style="color: #fff ">Cartelera</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </ul>
+
+            </div>
+
+            </a>
+        </div>
+        <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+            title="facebook">
+            <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+            title="instagram">
+            <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+            title="whatsapp">
+            <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+    </nav>
+    <hr>
     <div class="row">
         <div class="col-75">
             <div class="container">
@@ -28,62 +80,62 @@
                             <h3>Direccion de envio</h3>
                             <form action="/action_page.php" class="was-validated">
                                 <div class="mb-3 mt-3">
-                            <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">porfavor valide este campo </div>
-                            <input type="text" id="fname" name="firstname" placeholder="Cindy pancracia">
-                            <label for="email"><i class="fa fa-envelope"></i> Correo electronico</label>
-                            <input type="text" id="email" name="email" placeholder="pancracia@example.com">
-                            <label for="adr"><i class="fa fa-address-card-o"></i> Direccion </label>
-                            <input type="text" id="adr" name="address" placeholder="balmaceda #2233">
-                            <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
-                            <input type="text" id="city" name="city" placeholder="Concepcion">
+                                    <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">porfavor valide este campo </div>
+                                    <input type="text" id="fname" name="firstname" placeholder="Cindy pancracia">
+                                    <label for="email"><i class="fa fa-envelope"></i> Correo electronico</label>
+                                    <input type="text" id="email" name="email" placeholder="pancracia@example.com">
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Direccion </label>
+                                    <input type="text" id="adr" name="address" placeholder="balmaceda #2233">
+                                    <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
+                                    <input type="text" id="city" name="city" placeholder="Concepcion">
 
-                            <div class="row">
-                                <div class="col-50">
-                                    <label for="state">estado</label>
-                                    <input type="text" id="state" name="state" placeholder="NY">
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="state">estado</label>
+                                            <input type="text" id="state" name="state" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="zip">codigo</label>
+                                            <input type="text" id="zip" name="zip" placeholder="10001">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-50">
-                                    <label for="zip">codigo</label>
-                                    <input type="text" id="zip" name="zip" placeholder="10001">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-50">
-                            <h3>Pago</h3>
-                            <label for="fname"> tarjetas aceptadas</label>
-                            <div class="icon-container">
-                                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                <i class="fa fa-cc-discover" style="color:orange;"></i>
-                            </div>
-                            <label for="cname">Nombre en la tarjeta</label>
-                            <input type="text" id="cname" name="cardname" placeholder="Cindy pancracia">
-                            <label for="ccnum">Numero de tarjeta de credito</label>
-                            <input type="text" id="ccnum" name="cardnumber" placeholder="2222-3333-4444-5555">
-                            <label for="expmonth">Mes exp</label>
-                            <input type="text" id="expmonth" name="expmonth" placeholder="abril">
-
-                            <div class="row">
                                 <div class="col-50">
-                                    <label for="expyear">Año exp</label>
-                                    <input type="text" id="expyear" name="expyear" placeholder="2023">
-                                </div>
-                                <div class="col-50">
-                                    <label for="cvv">CVV</label>
-                                    <input type="text" id="cvv" name="cvv" placeholder="352">
-                                </div>
-                            </div>
-                        </div>
+                                    <h3>Pago</h3>
+                                    <label for="fname"> tarjetas aceptadas</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="cname">Nombre en la tarjeta</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Cindy pancracia">
+                                    <label for="ccnum">Numero de tarjeta de credito</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="2222-3333-4444-5555">
+                                    <label for="expmonth">Mes exp</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="abril">
 
-                    </div>
-                    <label>
-                        <input type="checkbox" checked="checked" name="sameadr"> enviar factura por correo
-                    </label>
-                    <input type="button" value="Continuar compra" class="btn">
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Año exp</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2023">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                    </div>
+
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="sameadr"> enviar factura por correo
+                                    </label>
+                                    <input type="button" value="Pagar" class="btn">
+                                    </div>
+                                </div>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@ body {
     font-family: 'Aclonica';
     color: #f1f1f1;
     margin-bottom: 3%;
-    margin-top:3%;
+    margin-top:0%;
 }
 
 * {
@@ -62,7 +62,8 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: green;
+    margin-left:25% ;
 }
 
 /* Float cancel and signup buttons and add an equal width */
@@ -75,6 +76,23 @@ button:hover {
 /* Add padding to container elements */
 .container {
     padding: 16px;
+    margin-left: 0%;
+    
+
+}
+.navbar navbar-expand-sm bg-dark navbar-dark{
+    margin-left: 0%;
+
+}
+
+
+.container-fluid{
+margin-top: 0%;
+margin-bottom: 1%;
+margin-left:0%;
+height: 30px;
+
+
 }
 
 /* Clear floats */
@@ -82,7 +100,7 @@ button:hover {
     content: "";
     clear: both;
     display: table;
- 
+
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
@@ -90,6 +108,14 @@ button:hover {
 
     .cancelbtn,
     .signupbtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1024px) {
+
+    .container-fluid {
+
         width: 100%;
     }
 }

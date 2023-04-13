@@ -1,11 +1,19 @@
+* {box-sizing: border-box}
+
 body {
     background-image: url("../imagenes/fondo.jpg");
     font-family:'Aclonica';
     color: white;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 3%;
+    margin-top: 0%;
     margin-bottom: 3%;
+}
+
+.navbar-brand .clearfix{
+    height: 2%;
+    width: 100%;
+    padding: 5%;
+    
+
 }
 
 .row {
@@ -70,7 +78,7 @@ label {
 
 .btn {
     
-    background-color: #04AA6D;
+    background-color: green;
     color: white;
     padding: 12px;
     margin: 10px 0;
@@ -82,7 +90,7 @@ label {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: green;
 }
 
 span.price {
