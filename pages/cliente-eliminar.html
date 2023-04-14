@@ -7,36 +7,27 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/border.css">
+    <link rel="stylesheet" href="../css/cliente-inicio.css">
     
-    
-    <title>Contactenos</title>
-
-    <style>
-      body {background-image: url("../imagenes/fondo.jpg");
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            }
-      .tarjeta {background-image: url("../imagenes/fondo.jpg");
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        } 
-
-        
-        
-    </style>
+    <title> Cliente - Eliminar</title>
 </head>
+
+<style>body 
+{
+  background-image: url("../imagenes/fondo.jpg");
+}
+</style>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand .clearfix" href="index.html">
+      <a class="navbar-brand" href="#">
         <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
         <label class="form-check-label" for="logo">Gameflix</label>
       </a>
     </div>
-    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="carrito de compras">
-      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"  > 
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Carrito">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
     </a>
     <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
       <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
@@ -70,42 +61,77 @@
       <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
     </a>
   </nav>
-  <br>
+
+  <hr>
   <div align="center">
-    <h4 style="color: white;">Contacto</h4>
-  </div>
+  <h2 style="color: white;">Eliminar Clientes </h2>
+</div>
   <form action="/action_page.php" style="border:1px solid #ccc">
-  <div class="container"  >
-  <label for="email" class="form-label">Nombre:</label>
-  <div class="input-group" >
-    <span class="input-group-text">First name</span>
-    <input type="text" aria-label="First name" class="form-control" required>
-    <span class="input-group-text"> last name</span>
-    <input type="text" aria-label="Last name" class="form-control" required>
-  </div>
+    <table class="table">
+    <thead>
+    <tr class="table-light">
+      <th scope="col">Run</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody class="text-white">
+    <tr>
+      <th scope="row">19456234-4</th>
+      <td>Mark Ernesto</td>
+      <td>Gonzalez Tapia</td>
+      <td>26-02-1989</td>
+      <td>mako@hotmail.cl</td>
+      <td align="center">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">  
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">17987345-8</th>
+      <td>Ignacia Gabriela</td>
+      <td>Lopez Flores</td>
+      <td>27-09-2005</td>
+      <td>gabi@gmail.com</td>
+      <td align="center">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">  
+      </td>
+    </tr>
+    <tr>
+      <tr>
+        <th scope="row">17987345-8</th>
+        <td>Carlos Fernando</td>
+        <td>Perez Ulloa</td>
+        <td>11-08-2000</td>
+        <td>coto@hotmail</td>
+        <td align="center">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;"> 
+        </td>
+      </tr>
+    </tr>
+    <tr>
+      <tr>
+        <th scope="row">17987345-8</th>
+        <td>Jacobo Gabriel</td>
+        <td>Landaeta Vera</td>
+        <td>11-08-2000</td>
+        <td>j.landa@duocuc.cl</td>
+        <td align="center">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">
+        </td>
+      </tr>
+  </tr>
+  </tbody>
   
-    <div class="mb-3 mt-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Ingrese su email " name="email" required >
-    </div>
-    
-   
-    <div class="mb-3 mt-3">
-      <label for="celular" class="form-label">Celular:</label>
-      <input type="number" class="form-control" id="celular" placeholder="Ingrese su celular" name="celular" required>
-    </div>
-    
-  <label for="comment">Mensaje:</label>
-<textarea class="form-control" rows="5" id="comment" name="text">Ingrese su mensaje aquí</textarea required>
-  <br>
+  </table>
   <div align="center">
     <div id="liveAlertPlaceholder">
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Eliminar</button>
   </div>
   </div>
-</div>
 </form>
-
 <script>
   var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
   var alertTrigger = document.getElementById('liveAlertBtn')
@@ -119,7 +145,7 @@
   
   if (alertTrigger) {
     alertTrigger.addEventListener('click', function () {
-      alert('El mensaje se ha enviado con éxito.', 'success')
+      alert('El cliente se ha eliminado con éxito.', 'success')
     })
   }
   </script>

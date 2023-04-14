@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/border.css">
     
     
-    <title>Contactenos</title>
+    <title>Agregar Cliente</title>
 
     <style>
       body {background-image: url("../imagenes/fondo.jpg");
@@ -45,22 +45,34 @@
 
   <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
     <div class="container-fluid">
-      <a class="navbar-brand" style="color: #fff "href="#" >Inicio</a>
+      <a class="navbar-brand" style="color: #fff "href="index.html">Inicio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item ">
-          <a class="nav-link" style="color: #fff" href="#" tabindex="-1" aria-disabled="true">Juegos</a>
-            </li>
-            <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: #fff;"href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            Juegos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">pelea</a></li>
+              <li><a class="dropdown-item" href="#">pistolas</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">juegos de rol</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
             <a class="nav-link"  style="color: #fff "href="#" tabindex="-1" aria-disabled="true">Contactenos</a>
           </li>
+
         </ul>
+        
       </div>
+        
+      </a>
     </div>
-      <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
       <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
     </a>
     <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="instagram">
@@ -70,60 +82,68 @@
       <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
     </a>
   </nav>
-  <br>
+  <hr>
   <div align="center">
-    <h4 style="color: white;">Contacto</h4>
+    <h2 style="color: white;">Lista de Clientes</h2>
   </div>
   <form action="/action_page.php" style="border:1px solid #ccc">
+  
   <div class="container"  >
-  <label for="email" class="form-label">Nombre:</label>
+
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Run:</label>
+      <input type="number" class="form-control" id="Run" placeholder="Ingrese número de run " name="email" required >
+    </div> 
+
+  <label for="email" class="form-label">Nombres:</label>
   <div class="input-group" >
-    <span class="input-group-text">First name</span>
+    <span class="input-group-text">Primer nombre</span>
     <input type="text" aria-label="First name" class="form-control" required>
-    <span class="input-group-text"> last name</span>
+    <span class="input-group-text"> Segundo nombre</span>
     <input type="text" aria-label="Last name" class="form-control" required>
+  </div>
+    <br>
+  <label for="email" class="form-label">Apellidos:</label>
+  <div class="input-group" >
+    <span class="input-group-text">Primer Apellido</span>
+    <input type="text" aria-label="First name" class="form-control" required>
+    <span class="input-group-text"> Segundo Apellido</span>
+    <input type="text" aria-label="Last name" class="form-control" required>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="celular" class="form-label">Fecha Nacimiento:</label>
+    <input type="number" class="form-control" id="celular" placeholder="Ingrese fecha de Nacimiento" name="celular" required>
   </div>
   
     <div class="mb-3 mt-3">
       <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Ingrese su email " name="email" required >
+      <input type="email" class="form-control" id="email" placeholder="Ingrese email " name="email" required >
     </div>
-    
-   
-    <div class="mb-3 mt-3">
-      <label for="celular" class="form-label">Celular:</label>
-      <input type="number" class="form-control" id="celular" placeholder="Ingrese su celular" name="celular" required>
-    </div>
-    
-  <label for="comment">Mensaje:</label>
-<textarea class="form-control" rows="5" id="comment" name="text">Ingrese su mensaje aquí</textarea required>
   <br>
   <div align="center">
-    <div id="liveAlertPlaceholder">
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
-  </div>
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Agregar</button>
   </div>
 </div>
 </form>
-
 <script>
-  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-  var alertTrigger = document.getElementById('liveAlertBtn')
-  
-  function alert(message, type) {
-    var wrapper = document.createElement('div')
-    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-  
-    alertPlaceholder.append(wrapper)
-  }
-  
-  if (alertTrigger) {
-    alertTrigger.addEventListener('click', function () {
-      alert('El mensaje se ha enviado con éxito.', 'success')
-    })
-  }
-  </script>
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('liveAlertBtn')
 
+function alert(message, type) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+  alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', function () {
+    alert('El cliente se ha guardado con éxito.', 'success')
+  })
+}
+</script>
 </body>
 </html>
 
