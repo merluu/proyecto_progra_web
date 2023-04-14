@@ -7,11 +7,7 @@ body {background-image: url("../imagenes/fondo.jpg");
 }
 * {box-sizing: border-box}
 
-.forma{color: #f44336;}
 
-.form{color: #f1f1f1;
-
-}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
