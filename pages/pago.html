@@ -132,17 +132,39 @@
                                     </div>
 
                                     <label>
-                                        <input type="checkbox" checked="checked" name="sameadr"> enviar factura por
+                                        <input  type="checkbox" checked="checked" name="sameadr"> enviar factura por
                                         correo
                                     </label>
-                                    <input type="button" value="Pagar" class="btn">
+                                    <div align="center">
+                                        <div id="liveAlertPlaceholder">
+                                        <a href="boleta.html">    
+                                        <button  type="button" class="btn btn-primary" id="liveAlertBtn">Pagar</button>
+                                        </a>    
+                                        </div>
+                                        </div>
                                 </div>
                         </div>
                 </form>
             </div>
         </div>
 
-
+        <script>
+            var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            var alertTrigger = document.getElementById('liveAlertBtn')
+            
+            function alert(message, type) {
+            var wrapper = document.createElement('div')
+            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+            
+            alertPlaceholder.append(wrapper)
+            }
+            
+            if (alertTrigger) {
+            alertTrigger.addEventListener('click', function () {
+                alert('El pago se ha hecho con éxito con éxito.', 'success')
+            })
+            }
+            </script>
 
 </body>
 
