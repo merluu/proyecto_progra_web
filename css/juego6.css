@@ -47,7 +47,7 @@ body {
     text-align: center;
     background: #1abc9c;
     color: black;
-    background-image: url(../imagenes/amq_elden_banner._terror.webp);
+    background-image: url(../imagenes/amq_sonic_banner.webp);
 }
 
 /* Increase the font size of the heading */
@@ -121,7 +121,7 @@ body {
 .fakeimg {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_elden-ring_logo.jpg);
+    background-image: url(../imagenes/amq_sonic_logo.webp);
     background-position: center;
     background-size: cover;
 
@@ -131,7 +131,7 @@ body {
 .fakeimg1 {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_elden_fight.webp);
+    background-image: url(../imagenes/amq_sonic_ciberespacio.jpg);
     background-position: center;
     background-size: cover;
 
@@ -141,7 +141,7 @@ body {
 .fakeimg2 {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_elden_gameplay2.webp);
+    background-image: url(../imagenes/amq_sonic_critica.jpeg);
     background-position: center;
     background-size: cover;
 
@@ -150,8 +150,8 @@ body {
 .fakeimg3 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_Elden-Ring_clasess.avif);
-    background-position: top;
+    background-image: url(../imagenes/amq_sonic_banner2.jpg);
+    background-position: center;
     background-size: cover;
 
 }
@@ -159,8 +159,8 @@ body {
 .fakeimg4 {
     background-color: #aaa;
     height: 250px;
-    background-image: url(../imagenes/amq_elden_gameplay.jpg);
-    background-position: top;
+    background-image: url(../imagenes/amq_sonic_world.avif);
+    background-position: bottom;
     background-size: cover;
 
 
@@ -169,8 +169,8 @@ body {
 .fakeimg5 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_elden_fight3.webp);
-    background-position: top;
+    background-image: url(../imagenes/amq_Batalla-Giganto-en-Sonic-Frontiers.webp);
+    background-position: center;
     background-size: cover;
 
 
@@ -178,7 +178,7 @@ body {
 .fakeimg6 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_elden_enemies.avif);
+    background-image: url(../imagenes/amq_sonic_chaosEsmeralds.jpg);
     background-position: top;
     background-size: cover;
 }
