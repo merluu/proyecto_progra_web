@@ -2,80 +2,83 @@
   box-sizing: border-box;
 }
 
+.container-fluid{
+  width: 100%;
+}
 body {
-  color: #f1f1f1;
-  background-image: url("../imagenes/fondo.jpg");
-  font-family: 'Aclonica';
-  margin-top: 0%;
-  margin-bottom: 3%;
+  color: white !important;
+  background-image: url("../imagenes/fondo.jpg") ;
+  font-family: 'Aclonica' !important;
+  margin-top: 0% !important;
+  margin-bottom: 3% !important ;
+  z-index: -1000 !important;
+  height: 100% !important;
 }
 
 /* Float four columns side by side */
 .column {
-  float: left;
-  width: 25%;
-  padding: 0 15px;
-  margin-top: 2%;
-
+  float: left !important;
+  width: 25% !important;
+  padding: 0 15px !important;
+  margin-top: 2% !important;
 }
 
 /* Remove extra left and right margins, due to padding */
 .row {
-  margin: 0 -5px;
+  margin: 0 -5px !important;
 }
 
 .imageCard {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1000 !important;
+  border-radius: 10px !important;
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
 }
 
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 20px !important;
   }
 }
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 400px;
-  text-align: center;
-  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)!important ;
+  height: 400px!important ;
+  text-align: center !important;
+  background-color: transparent!important ;
 }
 
 /*INICIO TOOL TIPS*/
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+.tooltipNo {
+  display: inline-block !important;
+  border-bottom: 1px dotted black ;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+.tooltipNo .tooltiptext {
+  visibility: hidden  !important;
+  width: 200px !important;
+  background-color: white !important;
+  color: black !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+  padding: 5px 0 !important;
 
   /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+.tooltipNo:hover .tooltiptext {
+  visibility: visible !important;
 }
 
 /* FIN TOOL TIPS*/
