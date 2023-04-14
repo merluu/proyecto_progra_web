@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <title>Carrito</title>
+</head>
+
+<style>body 
+{
+  background-image: url("../imagenes/fondo.jpg");
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
+        <label class="form-check-label" for="logo">Gameflix</label>
+      </a>
+    </div>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Carrito">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
+      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: #fff "href="#" >Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+          <a class="nav-link" style="color: #fff" href="#" tabindex="-1" aria-disabled="true">Juegos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"  style="color: #fff "href="#" tabindex="-1" aria-disabled="true">Contactenos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
+      <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="instagram">
+      <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="whatsapp">
+      <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div align="left">
+        <h4 style="color: white">Carro de Compras</h4>
+      </div>
+      <div class="col-8">
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">CyberPunk</div>
+              Año - 2016
+              <div class="text-center">
+                <img src="../imagenes/cyberbug.jpg" class="rounded" alt="..." width="100" height="100">
+              </div>
+            </div>
+            <span class="badge bg-warning rounded-pill">$15.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Doom Eternal</div>
+              Año - 2017
+              <div class="text-center">
+                <img src="../imagenes/doomEternal.jpg" class="rounded" alt="..." width="100" height="100">
+              </div>
+            </div>
+            <span class="badge bg-warning rounded-pill">$30.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Counter</div>
+              Año - 2000
+              <div class="text-center">
+                <img src="../imagenes/counter.jpg" class="rounded" alt="..." width="100" height="100">
+              </div>
+            </div>
+            <span class="badge bg-warning rounded-pill">$20.000</span>
+          </li>
+        </ol>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h5>Resumen de la compra</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Productos: 5 (unds)</p>
+            <p class="card-text"><b>Total: </b>$25.990</p>
+            <div align="center">
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
