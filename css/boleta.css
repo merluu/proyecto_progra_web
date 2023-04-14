@@ -1,13 +1,45 @@
 body {
     background-image: url("../imagenes/fondo.jpg");
     font-family: 'Aclonica';
-    color: #f1f1f1;
-    margin-bottom: 3%;
-    margin-top:0%;
+    color: white;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
 }
 
 * {
     box-sizing: border-box
+}
+.container hr{
+    width: 100%;
+}
+.container h1{
+    font-size:30px;
+
+}
+.container h2{
+    font-size:50px;
+    color:green;
+}
+
+.container p{
+    font-size:15px;
+    color:white;
+
+}
+.container h4{
+    font-size:20px;
+    color:green;
+
+}
+
+
+
+
+.container h3{
+    font-size:40px;
+    color:white;
+
 }
 
 /* Full-width input fields */
@@ -45,8 +77,9 @@ hr {
 
 /* Set a style for all buttons */
 button {
-    background-color: #04AA6D;
+    background-color: green;
     color: white;
+    float: left;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -62,45 +95,48 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
     padding: 14px 20px;
-    background-color: green;
-    margin-left:25% ;
+    background-color: #f44336;
 }
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn,
 .signupbtn {
-    float: left;
+
     width: 50%;
+}
+
+.container-fluid {
+    margin-top: 0%;
+    margin-bottom: 1%;
+    margin-left: 0%;
+    height: 30px;
 }
 
 /* Add padding to container elements */
 .container {
     padding: 16px;
-    margin-left: 0%;
     
+    color: white;
+    background-image: url(../imagenes/fondo.jpg);
+    margin-bottom: 3%;
 
 }
-.navbar navbar-expand-sm bg-dark navbar-dark{
-    margin-left: 0%;
 
+.forma {
+    margin: 16px;
+    margin-bottom: 5%;
+    
 }
 
 
-.container-fluid{
-margin-top: 0%;
-margin-bottom: 1%;
-margin-left:0%;
-height: 30px;
 
-
-}
 
 /* Clear floats */
+
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
-
 }
 
 /* Change styles for cancel button and signup button on extra small screens */

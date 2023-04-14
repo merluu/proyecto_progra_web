@@ -1,9 +1,13 @@
 body {background-image: url("../imagenes/fondo.jpg");
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Aclonica';
     color: white;
+    margin-top: 0%;
+    margin-bottom: 0%;
     
 }
 * {box-sizing: border-box}
+
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -37,8 +41,8 @@ hr {
   }
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
-  color: white;
+  background-color: green;
+  color: white;float: left;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -59,16 +63,34 @@ button:hover {
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
-  float: left;
+  
   width: 50%;
+}
+
+.container-fluid{
+margin-top: 0%;
+margin-bottom: 1%;
+margin-left:0%;
+height: 30px;
 }
 
 /* Add padding to container elements */
 .container {
   padding: 16px;
+  
+
 }
 
+.forma{
+  margin:16px;
+  margin-bottom: 5%;
+}
+  
+
+
+
 /* Clear floats */
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -79,5 +101,13 @@ button:hover {
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1024px) {
+
+  .container-fluid {
+
+      width: 100%;
   }
 }
