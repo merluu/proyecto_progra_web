@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cliente-inicio.css">
+    
+    <title> Cliente - Editar</title>
+</head>
+
+<style>body 
+{
+  background-image: url("../imagenes/fondo.jpg");
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
+        <label class="form-check-label" for="logo">Gameflix</label>
+      </a>
+    </div>
+    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Carrito">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
+      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: #fff" href="index.html" >Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+          <a class="nav-link" style="color: #fff" href="cartelera.html" tabindex="-1" aria-disabled="true">Juegos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"  style="color: #fff" href="contacto.html" tabindex="-1" aria-disabled="true">Contactenos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
+      <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="instagram">
+      <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="whatsapp">
+      <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <hr>
+  <div align="center">
+  <h2 style="color: white;">Editar Clientes </h2>
+</div>
+  <form action="/action_page.php" style="border:1px solid #ccc">
+    <table class="table">
+    <thead>
+    <tr class="table-light">
+      <th scope="col">Run</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody class="text-white">
+    <tr>
+      <th contenteditable="true" scope="row">19456234-4</th>
+      <td contenteditable="true">Mark Ernesto</td>
+      <td contenteditable="true">Gonzalez Tapia</td>
+      <td contenteditable="true">26-02-1989</td>
+      <td contenteditable="true">mako@hotmail.cl</td>
+      <td align="center">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">  
+      </td>
+    </tr>
+    <tr>
+      <th contenteditable="true" scope="row">17987345-8</th>
+      <td contenteditable="true">Ignacia Gabriela</td>
+      <td contenteditable="true">Lopez Flores</td>
+      <td contenteditable="true">27-09-2005</td>
+      <td contenteditable="true">gabi@gmail.com</td>
+      <td align="center">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">  
+      </td>
+    </tr>
+    <tr>
+      <tr>
+        <th contenteditable="true" scope="row">17987345-8</th>
+        <td contenteditable="true">Carlos Fernando</td>
+        <td contenteditable="true">Perez Ulloa</td>
+        <td contenteditable="true">11-08-2000</td>
+        <td contenteditable="true">coto@hotmail</td>
+        <td align="center">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;"> 
+        </td>
+      </tr>
+    </tr>
+    <tr>
+      <tr>
+        <th contenteditable="true" scope="row">17987345-8</th>
+        <td contenteditable="true">Jacobo Gabriel</td>
+        <td contenteditable="true">Landaeta Vera</td>
+        <td contenteditable="true" >11-08-2000</td>
+        <td contenteditable="true">j.landa@duocuc.cl</td>
+        <td align="center">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-right: 2px;">
+        </td>
+      </tr>
+  </tr>
+  </tbody>
+  
+  </table>
+  <div align="center">
+    <div id="liveAlertPlaceholder">
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Editar</button>
+  </div>
+  </div>
+</form>
+<script>
+  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+  var alertTrigger = document.getElementById('liveAlertBtn')
+  
+  function alert(message, type) {
+    var wrapper = document.createElement('div')
+    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+  
+    alertPlaceholder.append(wrapper)
+  }
+  
+  if (alertTrigger) {
+    alertTrigger.addEventListener('click', function () {
+      alert('El cliente se ha editado con éxito.', 'success')
+    })
+  }
+  </script>
+
+</body>
+</html>
+
+
