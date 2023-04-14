@@ -44,10 +44,10 @@ body {
 .header {
     margin-top: 0%;
     padding: 15%;
-    text-align: center;
+    text-align: bottom;
     background: #1abc9c;
     color: black;
-    background-image: url(../imagenes/amq_tekken_jin.jpeg);
+    background-image: url(../imagenes/amq_forza_1366_2000.jpg);
 }
 
 /* Increase the font size of the heading */
@@ -121,7 +121,7 @@ body {
 .fakeimg {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_tekken_logo2.jpg);
+    background-image: url(../imagenes/amq_forza_logo.webp);
     background-position: center;
     background-size: cover;
 
@@ -131,7 +131,7 @@ body {
 .fakeimg1 {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_tekken_kazuya_vs_jin.png);
+    background-image: url(../imagenes/amq_forza_gameplay2.jpeg);
     background-position: center;
     background-size: cover;
 
@@ -141,7 +141,7 @@ body {
 .fakeimg2 {
     background-color: #aaa;
     height: 300px;
-    background-image: url(../imagenes/amq_tekken_paul.jpg);
+    background-image: url(../imagenes/amq_forza_gameplay.png);
     background-position: center;
     background-size: cover;
 
@@ -150,7 +150,7 @@ body {
 .fakeimg3 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_tekken_characters.jpg);
+    background-image: url(../imagenes/amq_forza_banner.jpg);
     background-position: center;
     background-size: cover;
 
@@ -159,8 +159,8 @@ body {
 .fakeimg4 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_tekken_jun_kazama.jpg);
-    background-position: top;
+    background-image: url(../imagenes/amq_forza_gameplay3.webp);
+    background-position: center;
     background-size: cover;
 
 
@@ -169,8 +169,8 @@ body {
 .fakeimg5 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_tekken-8-jin.webp);
-    background-position: top;
+    background-image: url(../imagenes/amq_forza_nieve.webp);
+    background-position: bottom;
     background-size: cover;
 
 
@@ -178,7 +178,7 @@ body {
 .fakeimg6 {
     background-color: #aaa;
     height: 200px;
-    background-image: url(../imagenes/amq_tekken-8-recoverable-gauge-jin-nina.webp);
+    background-image: url(../imagenes/amq_forza-horizon-5-juego-xbox-game-pass.avif);
     background-position: center;
     background-size: cover;
 }
