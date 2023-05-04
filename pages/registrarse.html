@@ -12,8 +12,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/registrarse.css">
-    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-
+    <script src="../js/registrarse.js"></script>
+    <script src="../js/jquery.js"></script>
 </head>
 
 <body>
@@ -73,6 +73,10 @@
         <h1>Registrarse</h1>
         <p>Por favor, rellene este formulario para crear una cuenta.</p>
         <hr>
+        <!--este es un parrafo vació para cambiarle el valor con el jqry con el evento oninput a la caja del rut -->
+        <p id="id-msj" style="color:red"></p>
+        <label for="rut"><b>Rut</b></label>
+        <input type="text" placeholder="Ingrese Rut" name="rut" id="id-rut" oninput="validarRut()" required>
 
         <label for="nombre"><b>Nombre</b></label>
         <input type="text" placeholder="Ingrese nombre" name="nombre" required>
@@ -97,8 +101,8 @@
         <p>Al crear una cuenta, usted acepta nuestros <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
         <div class="clearfix">
-          <button type="button" class="cancelbtn">Cancelar</button>
-          <button type="button" class="signupbtn">Registrarse</button>
+          <button type="button" class="cancelbtn" id="id-can">Cancelar</button>
+          <button type="button" class="signupbtn" id="id-reg">Registrarse</button>
 
         </div>
       </div>
