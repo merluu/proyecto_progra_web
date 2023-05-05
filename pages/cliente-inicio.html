@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cliente-inicio.css">
+    
+    <title> Cliente - Lista</title>
+</head>
+
+<style>body 
+{
+  background-image: url("../imagenes/fondo.jpg");
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
+        <label class="form-check-label" for="logo">Gameflix</label>
+      </a>
+    </div>
+    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Carrito">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
+      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: #fff" href="index.html" >Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+          <a class="nav-link" style="color: #fff" href="cartelera.html" tabindex="-1" aria-disabled="true">Juegos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"  style="color: #fff "href="contacto" tabindex="-1" aria-disabled="true">Contactenos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
+      <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="instagram">
+      <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="whatsapp">
+      <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    </a>
+  </nav>
+
+  <hr>
+  <div align="center">
+  <h2 style="color: white;">Lista de Clientes</h2>
+</div>
+  <form action="/action_page.php" style="border:1px solid #ccc">
+    <table class="table">
+    <thead>
+    <tr class="table-light">
+      <th scope="col">Run</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Correo</th>
+    </tr>
+  </thead>
+  <tbody class="text-white">
+    <tr>
+      <th scope="row">19456234-4</th>
+      <td>Mark Ernesto</td>
+      <td>Gonzalez Tapia</td>
+      <td>26-02-1989</td>
+      <td>mako@hotmail.cl</td>
+    </tr>
+    <tr>
+      <th scope="row">17987345-8</th>
+      <td>Ignacia Gabriela</td>
+      <td>Lopez Flores</td>
+      <td>27-09-2005</td>
+      <td>gabi@gmail.com</td>
+    </tr>
+    <tr>
+      <tr>
+        <th scope="row">17987345-8</th>
+        <td>Carlos Fernando</td>
+        <td>Perez Ulloa</td>
+        <td>11-08-2000</td>
+        <td>coto@hotmail</td>
+      </tr>
+    </tr>
+    <tr>
+      <tr>
+        <th scope="row">17987345-8</th>
+        <td>Jacobo Gabriel</td>
+        <td>Landaeta Vera</td>
+        <td>11-08-2000</td>
+        <td>j.landa@duocuc.cl</td>
+      </tr>
+  </tr>
+  </tbody>
+  </table>
+</form>
+
+</body>
+</html>
+
+
