@@ -13,7 +13,49 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/adminSesion.css">
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <script>
+        // Agrega un controlador de eventos para el evento "submit"
+        document.addEventListener("submit", function (event) {
+          // Cancela el envío del formulario
+          event.preventDefault();
+  
+          // Obtiene los valores de los campos
+          var nombre = document.getElementsByName("nombre")[0].value;
+          var psw = document.getElementsByName("psw")[0].value;
 
+          //Esto para Levantar Span De error
+          var span = document.getElementById("mi-span");
+            console.log('pasa');
+          // Realiza las validaciones
+          if (nombre === "") {
+            alert("Por favor ingrese su nombre");
+            span.style.display = "flex";
+            console.log('entro');
+            document.getElementsByName("nombre")[0].classList.add("input-error");
+            return false;
+          } else {
+            console.log('entro2');
+            span.style.display = "none";
+            document.getElementsByName("nombre")[0].classList.remove("input-error");
+          }
+  
+  
+
+          if (psw === "") {
+            alert("Por favor ingrese su contraseña");
+            return false;
+          }
+  
+          // Valida que la contraseña tenga al menos 8 caracteres y al menos una letra mayúscula
+          var pswRegex = /^(?=.*[A-Z]).{8,}$/;
+          if (!pswRegex.test(psw)) {
+            alert("La contraseña debe tener al menos 8 caracteres y al menos una letra mayúscula");
+            return false;
+          }
+          // Si todo está bien, envía el formulario
+          form.submit();
+        });
+      </script>
 
 </head>
 
@@ -72,17 +114,18 @@
     <hr>
 
     <form action="/action_page.php" style="border:1px solid #ccc">
-        <div class="container">
+        <div  id="myForm" class="container">
             <h1>Administrador</h1>
 
             <hr>
 
-            <label for="nombre"><b>Nombre </b></label>
-            <input type="text" placeholder="Ingrese usuario" name="nombre" required>
-
-            <label for="contraseña"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingrese Contraseña" name="contraseña" required>
-
+            <label for="nombre"><b>Nombre de Usuario</b></label>
+            <input type="text" placeholder="Ingrese usuario" name="nombre"  id="nombre"  required>
+            <h6 id="mi-span" style="display: none;" >Debe Ingresar Nombre</h6>
+            
+            <label for="psw"><b>Contraseña</b></label>
+            <input type="password" placeholder="Ingrese Contraseña"  name="psw" id="psw" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <h6 id="mi-span" style="display: none;" >Debe Ingresar Password</h6>
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame <p> <a
                         href="#" style="color:dodgerblue"></a></p>
@@ -97,7 +140,7 @@
 
 
             <div class="clearfix">
-                <button type="button" class="cancelbtn">Entrar</button>
+                <button type="submit" class="cancelbtn">Entrar</button>
 
             </div>
         </div>
