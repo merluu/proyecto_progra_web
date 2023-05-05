@@ -15,6 +15,10 @@ body {
   height: 100% !important;
 }
 
+.card:hover {
+  width: 105%; /* Cambia el ancho cuando el cursor está sobre el elemento */
+  height: 105%; /* Cambia la altura cuando el cursor está sobre el elemento */
+}
 /* Float four columns side by side */
 .column {
   float: left !important;
