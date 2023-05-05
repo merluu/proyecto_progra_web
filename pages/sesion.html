@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,8 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/sesion.css">
+    <script src="../js/sesion.js"></script>
+    <script src="../js/jquery.js"></script>
 
 </head>
 
@@ -75,10 +78,10 @@
             <hr>
 
             <label for="nombre"><b>Nombre de Usuario</b></label>
-            <input type="text" placeholder="Ingrese usuario" name="nombre" required>
+            <input type="text" placeholder="Ingrese usuario" name="nombre" id="id-campoUserName" required>
 
             <label for="contraseña"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingrese Contraseña" name="contraseña" required>
+            <input type="password" placeholder="Ingrese Contraseña" name="contraseña" id="id-campoPass" required>
 
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame <p> <a
@@ -105,7 +108,7 @@
 
             <div class="clearfix">
                 <div align="center">
-                    <a href="index.html" class="btn btn-primary">Entrar</a>
+                    <button type="button" class="btn btn-primary" onclick="validarUserName()">Entrar</button>
                 </div>
 
             </div>
