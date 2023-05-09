@@ -1,32 +1,22 @@
 function validaciones() {
 
-    //
-    const nombre = document.getElementById("id-producto").value;
-    const parrafo = $('#id-producto');
-    // Expresión regular para validar el nombre
-    var regex = /^[a-zA-Z ]{3,}$/;
-
-    console.log(nombre);
-
-    if (nombre != "" && validarAnno() && validarPrecio()) {
+    if (validarNombre() && validarAnno() && validarPrecio()  && validarDescripcion()) {
         alert("Producto editado correctamente!");
     } else {
-        alert("faltan campos");
+        alert("campo(s) inválido(s)");
     }
+}
 
-    // Valida el nombre utilizando la expresión regular
-    if (nombre.trim() === "") {
-        parrafo.text('nombre no puede estar vacío');
-        // El nombre está vacío
-        return false;
-    } else if (!regex.test(nombre)) {
-        parrafo.text('nombre inválido');
-        // El nombre no cumple con los requisitos
-        return false;
-    } else {
-        parrafo.text('');
-        // El nombre es válido
+function validarNombre() {
+    const nomprod = $('#id-producto').val();
+    // parrafo_nombre tiene el elemento párrafo especifico con todos sus atributos.
+    const parrafo_nombre = $('#id-msjpro');
+    if (nomprod != ""){
+        parrafo_nombre.text('');
         return true;
+    }else{
+        parrafo_nombre.text('El nombre del producto no puede estar en blanco.');
+        return false;
     }
 }
 
@@ -67,5 +57,19 @@ function validarPrecio() {
     } else {
         msjprecio.text('');
         return true;
+    }
+
+}
+
+function validarDescripcion() {
+    const desc = $('#id-textarea').val();
+    // parrafo_nombre tiene el elemento párrafo especifico con todos sus atributos.
+    const parrafo_txtarea = $('#id-desctxt');
+    if (desc != ""){
+        parrafo_txtarea.text('');
+        return true;
+    }else{
+        parrafo_txtarea.text('El texto no puede estar en blanco.');
+        return false;
     }
 }
