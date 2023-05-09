@@ -10,11 +10,17 @@ body {
   background-image: url("../imagenes/fondo.jpg") ;
   font-family: 'Aclonica' !important;
   margin-top: 0% !important;
-  margin-bottom: 3% !important ;
+  margin-bottom: 25% !important ;
   z-index: -1000 !important;
   height: 100% !important;
+  
 }
 
+.card:hover {
+  width: 105%; /* Cambia el ancho cuando el cursor está sobre el elemento */
+  height: 105%; /* Cambia la altura cuando el cursor está sobre el elemento */
+  color: azure;
+}
 /* Float four columns side by side */
 .column {
   float: left !important;
