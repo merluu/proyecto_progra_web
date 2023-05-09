@@ -7,6 +7,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/producto-agregar.js"></script>
+    <script src="../js/jquery.js"></script>
     
     <title>Producto - agregar</title>
 </head>
@@ -71,15 +73,17 @@
       <div style="padding-top: 10px; padding-bottom: 10px">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Producto</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre del producto" value="Assasins Creed Mirage" >
+          <input type="text" class="form-control" id="id-producto" placeholder="nombre del producto" value="Assasins Creed Mirage" >
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Año</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Año de creacion" required>
+          <input type="date" class="form-control" id="id-anno" placeholder="Año de creacion" required>
+          <p id="id-msjfech" style="color:red"></p>
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Precio</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Precio del producto" required>
+          <input type="number" class="form-control" id="id-precio" placeholder="Precio del producto" required>
+          <p id="id-msjprecio" style="color:red"></p>  
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Subir imagen del producto</label>
@@ -89,33 +93,17 @@
           <label for="exampleFormControlTextarea1" class="form-label" required>Descripción del producto</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required>Escriba aquí su descripción</textarea >
         </div>
-          <!-- Button trigger modal -->
+          <!-- Button trigger modal
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Aceptar
-        </button>
+        </button> -->
+        <div align="center">
+          <div class="clearfix">
+            <button type="button" class="btn btn-primary" id="id-agreg" onclick="validaciones()">Agregar</button>
+          </div>
+        </div>
         </div>
     </div>
   </div>
-
-<!-- Modal -->
-<div   class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div  class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¿Está seguro de realizar los cambios?
-      </div>
-      <div  class="modal-footer">
-        <button type="button" class="btn btn-primary">Agregar</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
-
-

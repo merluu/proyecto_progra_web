@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/producto-editar.js"></script>
+    <script src="../js/jquery.js"></script>
     
     <title>Producto - editar</title>
 </head>
@@ -75,15 +76,18 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Producto</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre del producto" value="SONIC-2">
+          <input type="text" class="form-control" id="id-producto" placeholder="nombre del producto" value="SONIC-2">
         </div>
+        <p id="id-producto" style="color:red"></p>  
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Año</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Año de creacion">
+          <input type="date" class="form-control" id="id-anno" placeholder="Año de creacion">
         </div>
+        <p id="id-msjfech" style="color:red"></p>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Precio</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Precio del producto">
+          <input type="number" class="form-control" id="id-precio" placeholder="Precio del producto">
+        <p id="id-msjprecio" style="color:red"></p>  
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Subir imagen del producto</label>
@@ -93,7 +97,7 @@
           <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <a href="#" class="btn btn-primary">Editar Producto</a>
+        <button  class="btn btn-primary" onclick="validaciones()">Editar Producto</button>
       </div>
     </div>
   </div>
