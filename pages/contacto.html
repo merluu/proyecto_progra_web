@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/border.css">
-    
-    
-    <title>Contactenos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/border.css">
+  <script src="../js/contacto.js"></script>
+  <script src="../js/jquery.js"></script>
 
-    <style>
-      body {background-image: url("../imagenes/fondo.jpg");
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            }
-      .tarjeta {background-image: url("../imagenes/fondo.jpg");
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        } 
 
-        
-        
-    </style>
+  <title>Contactenos</title>
+
+  <style>
+    body {
+      background-image: url("../imagenes/fondo.jpg");
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+
+    .tarjeta {
+      background-image: url("../imagenes/fondo.jpg");
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand .clearfix" href="index.html">
-        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo"> 
+        <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo">
         <label class="form-check-label" for="logo">Gameflix</label>
       </a>
     </div>
-    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="carrito de compras">
-      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"  > 
+    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip"
+      data-placement="bottom" title="carrito de compras">
+      <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
-    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
-      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+      title="Inicia Sesión">
+      <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
   </nav>
 
-  <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
+  <nav class="navbar navbar-expand-sm bg-danger navbar-danger">
     <div class="container-fluid">
-      <a class="navbar-brand" style="color: #fff" href="index.html" >Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" style="color: #fff" href="index.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item ">
-          <a class="nav-link" style="color: #fff" href="cartelera.html" tabindex="-1" aria-disabled="true">Juegos</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link"  style="color: #fff "href="#" tabindex="-1" aria-disabled="true">Contactenos</a>
+            <a class="nav-link" style="color: #fff" href="cartelera.html" tabindex="-1" aria-disabled="true">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fff " href="#" tabindex="-1" aria-disabled="true">Contactenos</a>
           </li>
         </ul>
       </div>
     </div>
-      <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank"  style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="facebook">
-      <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank" style="margin-right: 10px;"
+      data-toggle="tooltip" data-placement="bottom" title="facebook">
+      <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
-    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="instagram">
-      <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+      title="instagram">
+      <img src="../imagenes/insta.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
-    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="whatsapp">
-      <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
+    <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
+      title="whatsapp">
+      <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
   </nav>
   <br>
@@ -75,56 +84,46 @@
     <h4 style="color: white;">Contacto</h4>
   </div>
   <form action="/action_page.php" style="border:1px solid #ccc">
-  <div class="container"  >
-  <label for="email" class="form-label">Nombre:</label>
-  <div class="input-group" >
-    <span class="input-group-text">First name</span>
-    <input type="text" aria-label="First name" class="form-control" required>
-    <span class="input-group-text"> last name</span>
-    <input type="text" aria-label="Last name" class="form-control" required>
-  </div>
-  
-    <div class="mb-3 mt-3">
-      <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Ingrese su email " name="email" required >
-    </div>
-    
-   
-    <div class="mb-3 mt-3">
-      <label for="celular" class="form-label">Celular:</label>
-      <input type="number" class="form-control" id="celular" placeholder="Ingrese su celular" name="celular" required>
-    </div>
-    
-  <label for="comment">Mensaje:</label>
-<textarea class="form-control" rows="5" id="comment" name="text">Ingrese su mensaje aquí</textarea required>
+    <div class="container">
+      <label for="email" class="form-label">Nombre:</label>
+      <div class="input-group">
+        <span class="input-group-text">First name</span>
+        <input type="text" aria-label="First name" class="form-control" id="id-nom" required>
+        <span class="input-group-text"> last name</span>
+        <input type="text" aria-label="Last name" class="form-control" id="id-ape" required>
+        
+      </div>
+      <p id="id-msjs" style="color:red"></p>
+
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="id-email" placeholder="Ingrese su email " name="email" required>
+        <p id="id-msje" style="color:red"></p>
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="celular" class="form-label">Celular:</label>
+        <input type="number" class="form-control" id="id-celular" placeholder="Ingrese su celular" name="celular" required>
+        <p id="id-msjcel" style="color:red"></p>
+      </div>
+
+      <label for="comment">Mensaje:</label>
+      <textarea class="form-control" rows="5" id="id-mensaje" name="text">Ingrese su mensaje aquí</textarea required>
+      <p id="id-msjmen" style="color:red"></p>
   <br>
-  <div align="center">
+  <!-- <div align="center">
     <div id="liveAlertPlaceholder">
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+    <button type="button" class="btn btn-primary" onclick="validarCampos()" id="liveAlertBtn">Enviar</button>
   </div>
+  </div> -->
+  <div align="center">
+  <div class="clearfix">
+    <button type="button" class="btn btn-primary" id="id-env" onclick="validarCampos()">Enviar</button>
+
   </div>
+</div>
 </div>
 </form>
 
-<script>
-  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-  var alertTrigger = document.getElementById('liveAlertBtn')
-  
-  function alert(message, type) {
-    var wrapper = document.createElement('div')
-    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-  
-    alertPlaceholder.append(wrapper)
-  }
-  
-  if (alertTrigger) {
-    alertTrigger.addEventListener('click', function () {
-      alert('El mensaje se ha enviado con éxito.', 'success')
-    })
-  }
-  </script>
-
 </body>
 </html>
-
-

@@ -1,5 +1,5 @@
 function validarCampos() {
-  if (validarRut() && validarCorreoElectronico() && validarContraseñas()) {
+  if (validarRut() && validarNombre() && validarApellido() && validarCorreoElectronico() && validarContraseñas() ) {
     window.location.href = '../pages/index.html';
   } else {
     alert("campos invalidos");
@@ -10,15 +10,23 @@ function validarRut() {
   const rut = document.getElementById("id-rut").value;
   const parrafo = $('#id-msj');
 
-  if (rutEsValido(rut) || rut == '') {
+  // Verificar si el campo RUT está vacío
+  if (rut.trim() === '') {
+    parrafo.text('Debes ingresar un RUT');
+    $('#id-rut').focus();
+    return false;
+  }
+
+  if (rutEsValido(rut)) {
     parrafo.text('');
     return true;
   } else {
-    parrafo.text('rut invalido');
+    parrafo.text('RUT inválido');
     $('#id-rut').focus();
     return false;
   }
 }
+
 
 function rutEsValido(rut) {
 
@@ -48,12 +56,20 @@ function rutEsValido(rut) {
   return (dv.toUpperCase() === dvEsperado);
 }
 
+
 function validarCorreoElectronico() {
   const email = document.getElementById("idEmail").value;
   const parrafo = $('#id-msjc');
+
+  // Verificar si el correo electrónico está vacío
+  if (email.trim() === '') {
+    parrafo.text('Debes ingresar un correo electrónico');
+    $('#idEmail').focus();
+    return false;
+  }
+
   // Expresión regular para validar el correo electrónico
   var regex = /\S+@\S+\.\S+/;
-
 
   // Valida el correo electrónico utilizando la expresión regular
   if (regex.test(email)) {
@@ -62,16 +78,23 @@ function validarCorreoElectronico() {
     return true;
   } else {
     // El correo electrónico no es válido
-    parrafo.text('correo invalido');
+    parrafo.text('Correo electrónico inválido');
     $('#idEmail').focus();
     return false;
   }
 }
 
+
 function validarContraseñas() {
   const contraseña1 = document.getElementById("idcontraseña1").value;
   const contraseña2 = document.getElementById("idcontraseña2").value;
   const parrafo = $('#id-msjp');
+
+  // Verificar si los campos de contraseña están vacíos
+  if (contraseña1.trim() === '' || contraseña2.trim() === '') {
+    parrafo.text('Las contraseñas no pueden estar vacias');
+    return false;
+  }
 
   if (contraseña1 === contraseña2) {
     // Las contraseñas son iguales
@@ -84,20 +107,47 @@ function validarContraseñas() {
   }
 }
 
+
 function validarNombre() {
   const nombre = document.getElementById("id-nombre").value;
+  const parrafo = $('#id-msjn');
   // Expresión regular para validar el nombre
   var regex = /^[a-zA-Z ]{3,}$/;
 
   // Valida el nombre utilizando la expresión regular
   if (nombre.trim() === "") {
+    parrafo.text('nombre no puede estar vacío');
     // El nombre está vacío
     return false;
   } else if (!regex.test(nombre)) {
+    parrafo.text('nombre invalido');
     // El nombre no cumple con los requisitos
     return false;
   } else {
+    parrafo.text('');
     // El nombre es válido
+    return true;
+  }
+}
+
+function validarApellido() {
+  const apellido = document.getElementById("id-apellido").value;
+  const parrafo = $('#id-msja');
+  // Expresión regular para validar el apellido
+  var regex = /^[a-zA-Z ]{3,}$/;
+
+  // Valida el nombre utilizando la expresión regular
+  if (apellido.trim() === "") {
+    parrafo.text('apellido no puede estar vacío');
+    // El apellido está vacío
+    return false;
+  } else if (!regex.test(apellido)) {
+    parrafo.text('apellido invalido');
+    // El apellido no cumple con los requisitos
+    return false;
+  } else {
+    parrafo.text('');
+    // El apellido es válido
     return true;
   }
 }

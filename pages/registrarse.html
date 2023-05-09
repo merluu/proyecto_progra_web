@@ -74,15 +74,17 @@
         <p>Por favor, rellene este formulario para crear una cuenta.</p>
         <hr>
         <label for="rut"><b>Rut</b></label>
-        <input type="text" placeholder="Ingrese Rut" name="rut" id="id-rut" oninput="validarRut()" required>
+        <input type="text" placeholder="Ingrese Rut" name="rut" id="id-rut"  required>
         <!--este es un parrafo vació para cambiarle el valor con el jqry con el evento oninput a la caja del rut -->
         <p id="id-msj" style="color:red"></p>
 
         <label for="nombre"><b>Nombre</b></label>
         <input type="text" placeholder="Ingrese nombre" id="id-nombre" name="nombre" required>
+        <p id="id-msjn" style="color:red"></p>
 
         <label for="apellido"><b>Apellido</b></label>
-        <input type="text" placeholder="Ingrese apellido" name="apellido" required>
+        <input type="text" placeholder="Ingrese apellido" id="id-apellido" name="apellido" required>
+        <p id="id-msja" style="color:red"></p>
 
 
         <label for="email"><b>Email</b></label>
