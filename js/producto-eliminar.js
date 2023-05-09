@@ -1,6 +1,6 @@
 function validarCampos() {
-
     if (validarCheckboxSeleccionado()) {
+        console.log("checkbox validos");
         confirmacion();
     }
 
@@ -18,28 +18,19 @@ function confirmacion() {
 }
 
 function validarCheckboxSeleccionado() {
-    const checkboxes = $('.form-check-input');
-    // const checkboxes = document.getElementById("id-Run").value;
     const parrafo = $('#id-msjcheck');
+    const numCheck = this.find('.form-check-input' + ':checked').length;
+    console.log(numCheck);
 
-    let isChecked = false;
-
-    checkboxes.each(function () {
-        if ($(this).is(':checked')) {
-            isChecked = true;
-        }
-
-        if ($(this).val().trim() === '') {
-            parrafo.text('Debes ingresar un valor para todos los checkboxes');
-            return false;
-        }
-    });
-
-    if (!isChecked) {
-        parrafo.text('Debes seleccionar al menos un checkbox');
+    if (this.find('.form-check-input').filter(':checked').length > 0) {
+        parrafo.text('');
+        return true;
+    } else {
+        parrafo.text('Debes ingresar un valor para todos los checkboxes');
         return false;
     }
-
-    parrafo.text('');
-    return true;
 }
+
+$.fn.numCheckboxesMarcados = function(clase) {
+    return this.find('.form-check-input' + ':checked').length;
+  };

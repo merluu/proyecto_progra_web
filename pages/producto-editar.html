@@ -78,6 +78,8 @@
           <label for="exampleFormControlInput1" class="form-label">Producto</label>
           <input type="text" class="form-control" id="id-producto" placeholder="nombre del producto" value="SONIC-2">
         </div>
+        <!-- este parrafo imprime un msj en caso que el nombre del prod, no cumpla con la validacion -->
+        <p id="id-msjpro" style="color:red"></p>
         <!-- <p id="id-producto" style="color:red"></p>   -->
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Año</label>
@@ -95,7 +97,9 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="id-textarea" rows="3"></textarea>
+          <!-- El elemento p es un párrafo donde se va a imprimir un msj en caos que txtarea, esté en blanco--> 
+          <p id="id-desctxt" style="color:red"></p>  
         </div>
         <button  class="btn btn-primary" onclick="validaciones()">Editar Producto</button>
       </div>

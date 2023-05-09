@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/producto-agregar.js"></script>
     <script src="../js/jquery.js"></script>
@@ -27,7 +26,7 @@
         <label class="form-check-label" for="logo">Gameflix</label>
       </a>
     </div>
-    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Carrito">
+    <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
       <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" > 
     </a>
     <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom" title="Inicia Sesión">
@@ -37,7 +36,7 @@
 
   <nav class="navbar navbar-expand-sm bg-danger navbar-danger" >
     <div class="container-fluid">
-      <a class="navbar-brand" style="color: #fff "href="index" >Inicio</a>
+      <a class="navbar-brand" style="color: #fff" href="#" >Inicio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,43 +66,42 @@
 
   <div class="container">
     <div align="center">
-      <h4 style="color: white;">Agregar Producto</h4>
-    </div>
+    <h4 style="color: white;">Agregar Producto</h4>
+  </div>
     <div class="row" style="background-color: white;">
       <div style="padding-top: 10px; padding-bottom: 10px">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Producto</label>
-          <input type="text" class="form-control" id="id-producto" placeholder="nombre del producto" value="Assasins Creed Mirage" >
+          <input type="text" class="form-control" id="id-producto" placeholder="nombre del producto">
         </div>
+        <!-- este parrafo imprime un msj en caso que el nombre del prod, no cumpla con la validacion -->
+        <p id="id-msjpro" style="color:red"></p>
+        <!-- <p id="id-producto" style="color:red"></p>   -->
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Año</label>
-          <input type="date" class="form-control" id="id-anno" placeholder="Año de creacion" required>
-          <p id="id-msjfech" style="color:red"></p>
+          <input type="date" class="form-control" id="id-anno" placeholder="Año de creacion">
         </div>
+        <p id="id-msjfech" style="color:red"></p>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Precio</label>
-          <input type="number" class="form-control" id="id-precio" placeholder="Precio del producto" required>
-          <p id="id-msjprecio" style="color:red"></p>  
+          <input type="number" class="form-control" id="id-precio" placeholder="Precio del producto">
+        <p id="id-msjprecio" style="color:red"></p>  
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Subir imagen del producto</label>
           <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="archivo">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label" required>Descripción del producto</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required>Escriba aquí su descripción</textarea >
+          <label for="exampleFormControlTextarea1" class="form-label">Descripción del producto</label>
+          <textarea class="form-control" id="id-textarea" rows="3"></textarea>
+          <!-- El elemento p es un párrafo donde se va a imprimir un msj en caos que txtarea, esté en blanco--> 
+          <p id="id-desctxt" style="color:red"></p>  
         </div>
-          <!-- Button trigger modal
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Aceptar
-        </button> -->
-        <div align="center">
-          <div class="clearfix">
-            <button type="button" class="btn btn-primary" id="id-agreg" onclick="validaciones()">Agregar</button>
-          </div>
-        </div>
-        </div>
+        <button  class="btn btn-primary" onclick="validaciones()">Agregar Producto</button>
+      </div>
     </div>
   </div>
 </body>
 </html>
+
+
