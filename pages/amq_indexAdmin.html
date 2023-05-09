@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     
-    <title>Carrito</title>
-</head>
+    <title>inicio admin</title>
 
-<style>body 
-{
-  background-image: url("../imagenes/fondo.jpg");
-}
-</style>
+    <style>
+      body {background-image: url("../imagenes/fondo.jpg");
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            }
+      .tarjeta {background-image: url("../imagenes/fondo.jpg");
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        } 
+    </style>
+</head>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -61,77 +65,25 @@
     </a>
   </nav>
 
-  <hr>
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Barra lateral con Bootstrap</title>
-    <!-- Incluimos los archivos de Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Estilo para la barra lateral -->
-    <style>
-      /* Set height of main container */
-      .container-fluid {
-        height: 100%;
-      }
-      /* Set gray background color and 100% height */
-      .sidenav {
-        background-color: #f1f1f1;
-        height: 100%;
-      }
-      /* On small screens, set height to 'auto' for the sidenav and grid */
-      @media screen and (max-width: 767px) {
-        .sidenav {
-          height: auto;
-          padding: 15px;
-        }
-        .row.content {height:auto;}
-      }
-      /* Dropdown button style */
-      .dropdown-menu > li > a:hover,
-      .dropdown-menu > li > a:focus {
-        background-color: #f1f1f1;
-      }
-    </style>
-  </head>
-  <body>
-  
-  <!-- Barra lateral -->
-  <div class="container-fluid">
-    <div class="row content">
-      <div class="col-sm-3 sidenav">
-        <h4>Opciones</h4>
-        <ul class="nav nav-pills nav-stacked">
-
-          
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#crearUsuarios">Crear Usuarios</a></li>
-              <li><a href="#editarUsuario">Editar Usuarios</a></li>
-              <li><a href="#eliminarUsuarios">Eliminar Usuarios</a></li>
-              <li><a href="#listaUsuarios">Lista Usuarios</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#crearProducto">Crear producto</a></li>
-              <li><a href="#editarProducto">Editar producto</a></li>
-              <li><a href="#eliminarProducto">Eliminar producto</a></li>
-              <li><a href="#listaProducto">Lista producto</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <hr>  
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      Cliente
+    </a>
+    <a href="cliente-inicio.html" class="list-group-item list-group-item-action">Listar Cliente</a>
+    <a href="cliente-agregar.html" class="list-group-item list-group-item-action">Crear cliente</a>
+    <a href="cliente-editar.html" class="list-group-item list-group-item-action">Editar Cliente</a>
+    <a href="cliente-eliminar.html" class="list-group-item list-group-item-action">Eliminar Cliente</a>
   </div>
-  
-  </body>
-  </html>
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Producto
+    </a>
+    <a href="producto-inicio.html" class="list-group-item list-group-item-action">Listar Producto</a>
+    <a href="producto-agregar.html" class="list-group-item list-group-item-action">Crear Producto</a>
+    <a href="producto-editar.html" class="list-group-item list-group-item-action">Editar Producto</a>
+    <a href="producto-eliminar.html" class="list-group-item list-group-item-action">Eliminar Producto</a>
+  </div>
+</body>
+</html>s
   
