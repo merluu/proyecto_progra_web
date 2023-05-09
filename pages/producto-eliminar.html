@@ -7,6 +7,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/producto-eliminar.js"></script>
+    <script src="../js/jquery.js"></script>
     
     <title>Producto - Eliminar</title>
 </head>
@@ -121,32 +123,14 @@
           </li>
           <br>
           <div align="center">
-            <div id="liveAlertPlaceholder">
-            <button type="button" class="btn btn-primary" id="liveAlertBtn">Eliminar</button>
-          </div>
+            <div class="clearfix">
+              <button type="button" class="btn btn-primary" id="id-agreg" onclick="validarCampos()">Eliminar</button>
+            </div>
           </div>
         </ol>
       </div>
     </div>
   </div>
-  <script>
-    var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-    var alertTrigger = document.getElementById('liveAlertBtn')
-    
-    function alert(message, type) {
-      var wrapper = document.createElement('div')
-      wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-    
-      alertPlaceholder.append(wrapper)
-    }
-    
-    if (alertTrigger) {
-      alertTrigger.addEventListener('click', function () {
-        alert('El producto ha sido eliminado con éxito.', 'success')
-      })
-    }
-    </script>
-
 </body>
 </html>
 

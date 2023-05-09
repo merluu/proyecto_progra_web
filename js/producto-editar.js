@@ -8,11 +8,6 @@ function validaciones() {
 
     console.log(nombre);
 
-    // Valida el nombre utilizando la expresión regular
-    if (nombre.trim() === "") {
-        parrafo.text('nombre no puede estar vacío');
-        // El nombre está vacío
-
     if (nombre != "" && validarAnno() && validarPrecio()) {
         alert("Producto editado correctamente!");
     } else {
@@ -59,33 +54,18 @@ function validarAnno() {
         parrafo.text('La fecha no puede ser superior a la fecha de hoy');
         return false;
     }
-
     parrafo.text('');
     return true;
-
 }
 
 function validarPrecio() {
-    // js nativo
-    // document=hoja html. Elemento => todas las etiquetas del body del html.
-    // getElementById = trae el elemento html(en este caso input) de código al que hace referencia por id.
-    // value = Es el valor que posee el input con id-precio
-    // var precio = document.getElementById("id-precio").value;
-    // La misma instrucción de la linea 68 pero con jquery.
     const precio = $('#id-precio').val();
-
-    //La id en jquery deben iniciar con 
-    // const =  la forma en la que se declaran las variables en 
-    // Se está trayendo el elemento con el id especifico.
     const msjprecio = $('#id-msjprecio');
-    // En este ej. capturamos el texto del elemento perteneciente al id= #id-msjprecio
-    //const texto = $('#id-msjprecio').text;
     if (precio === "" || precio <= 0) {
         msjprecio.text('Precio incorrecto');
         return false;
     } else {
         msjprecio.text('');
         return true;
-    }
     }
 }
