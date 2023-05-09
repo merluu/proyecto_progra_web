@@ -14,23 +14,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/pago.css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/pago.js"></script>
+    <script src="../js/usdclp.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand .clearfix" href="index.html">
-                <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo">  Gameflix
+                <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo">
+                Gameflix
                 <label class="form-check-label" for="logo"></label>
             </a>
         </div>
-        <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
-            title="carrito de compras">
+        <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip"
+            data-placement="bottom" title="carrito de compras">
             <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
         </a>
-        <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
-            title="Inicia Sesión">
+        <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip"
+            data-placement="bottom" title="Inicia Sesión">
             <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
         </a>
     </nav>
@@ -56,8 +59,8 @@
 
             </a>
         </div>
-        <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
-            title="facebook">
+        <a class="navbar-brand" href="https://web.facebook.com/3djuegos" target="_blank" style="margin-right: 10px;"
+            data-toggle="tooltip" data-placement="bottom" title="facebook">
             <img src="../imagenes/facebook.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
         </a>
         <a class="navbar-brand" href="#" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
@@ -74,32 +77,45 @@
     <div class="row">
         <div class="col-75">
             <div class="container">
-                <form action="/action_page.php">
+                <form id="myForm" action="/action_page.php">
 
                     <div class="row">
                         <div class="col-50">
                             <h3>Direccion de envio</h3>
-                            <form action="/action_page.php" class="was-validated">
+                            <form id="myForm" action="/action_page.php" class="was-validated">
                                 <div class="mb-3 mt-3">
                                     <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
                                     <div class="valid-feedback">Valid.</div>
                                     <div class="invalid-feedback">porfavor valide este campo </div>
-                                    <input type="text" id="fname" name="firstname" placeholder="Cindy pancracia">
+                                    <input type="text" id="name" name="name" maxlength="50"
+                                        placeholder="Cindy pancracia">
+                                    <h6 id="errnom" style="display: none;"> Debe Ingresar Nombre Completo </h6>
+                                    <h6 id="errcarc" style="display: none;"> El Nombre Debe Contener Al Menos 20
+                                        Caracteres </h6>
+
                                     <label for="email"><i class="fa fa-envelope"></i> Correo electronico</label>
                                     <input type="text" id="email" name="email" placeholder="pancracia@example.com">
-                                    <label for="adr"><i class="fa fa-address-card-o"></i> Direccion </label>
-                                    <input type="text" id="adr" name="address" placeholder="balmaceda #2233">
+                                    <h6 id="erremail" style="display: none;"> Debe Ingresar Un Email Correcto</h6>
+
+                                    <label for="address"><i class="fa fa-address-card-o"></i> Direccion </label>
+                                    <input type="text" id="address" name="address" maxlength="30"
+                                        placeholder="balmaceda #2233">
+                                    <h6 id="erradr" style="display: none;"> Debe Ingresar Direccion </h6>
+
                                     <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
-                                    <input type="text" id="city" name="city" placeholder="Concepcion">
+                                    <input type="text" id="city" name="city" maxlength="15" placeholder="Concepcion">
+                                    <h6 id="errcit" style="display: none;"> Debe Ingresar Ciudad </h6>
 
                                     <div class="row">
                                         <div class="col-50">
                                             <label for="state">estado</label>
-                                            <input type="text" id="state" name="state" placeholder="NY">
+                                            <input type="text" id="state" maxlength="15" name="state" placeholder="NY">
+                                            <h6 id="errsta" style="display: none;"> Debe Ingresar Estado </h6>
                                         </div>
                                         <div class="col-50">
-                                            <label for="zip">codigo</label>
-                                            <input type="text" id="zip" name="zip" placeholder="10001">
+                                            <label for="code">codigo</label>
+                                            <input type="text" id="code" name="code" maxlength="10" placeholder="10001">
+                                            <h6 id="errcod" style="display: none;"> Debe Ingresar Codigo </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -113,21 +129,35 @@
                                         <i class="fa fa-cc-mastercard" style="color:red;"></i>
                                         <i class="fa fa-cc-discover" style="color:orange;"></i>
                                     </div>
-                                    <label for="cname">Nombre en la tarjeta</label>
-                                    <input type="text" id="cname" name="cardname" placeholder="Cindy pancracia">
-                                    <label for="ccnum">Numero de tarjeta de credito</label>
-                                    <input type="text" id="ccnum" name="cardnumber" placeholder="2222-3333-4444-5555">
-                                    <label for="expmonth">Mes exp</label>
-                                    <input type="text" id="expmonth" name="expmonth" placeholder="abril">
+                                    <label for="cardname">Nombre en la tarjeta</label>
+                                    <input type="text" id="cardname" name="cardname" maxlength="35"
+                                        placeholder="Cindy pancracia">
+                                    <h6 id="errcarn" style="display: none;"> Debe Ingresar Cardname </h6>
+                                    <h6 id="errcarnlenght" style="display: none;"> Debe tener minimo 20 caracteres </h6>
 
+                                    <label for="cardnumber">Numero de tarjeta de credito</label>
+                                    <input type="text" id="cardnumber" name="cardnumber" maxlength="16"
+                                        placeholder="2222-3333-4444-5555">
+                                    <h6 id="errnumc" style="display: none;"> Debe Ingresar Informacion De Numero </h6>
+                                    <h6 id="errnumclenght" style="display: none;"> Debe Ingresar Al menos 16 Digitos
+                                        Tarjeta </h6>
+
+                                    <label for="expmonth">Mes exp</label>
+                                    <input type="text" id="expmonth" name="expmonth" maxlength="9" placeholder="abril">
+                                    <h6 id="errexm" style="display: none;"> Debe Ingresar Mes De Expiracion </h6>
+                                    <h6 id="errexmcorrectmonth" style="display: none;"> Debe Ingresar Un Mes Correcto
+                                    </h6>
                                     <div class="row">
                                         <div class="col-50">
                                             <label for="expyear">Año exp</label>
-                                            <input type="text" id="expyear" name="expyear" placeholder="2023">
+                                            <input type="text" id="expyear" name="expyear" maxlength="4"
+                                                placeholder="2023">
+                                            <h6 id="errexy" style="display: none;"> Debe Ingresar año Expiracion </h6>
                                         </div>
                                         <div class="col-50">
                                             <label for="cvv">CVV</label>
-                                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                                            <input type="text" maxlength="3" id="cvv" name="cvv" placeholder="352">
+                                            <h6 id="errcvv" style="display: none;"> Debe Ingresar CVV de 3 Digitos </h6>
                                         </div>
                                     </div>
 
@@ -136,35 +166,15 @@
                                         correo
                                     </label>
                                     <div align="center">
-                                        <div id="liveAlertPlaceholder">
-                                        <a href="boleta.html">    
-                                        <button  type="button" class="btn btn-primary" id="liveAlertBtn">Pagar</button>
-                                        </a>    
-                                        </div>
-                                        </div>
+                                        <button type="button" class="btn btn-primary"  id="submit"> Pagar</button>
+
+                                    </div>
                                 </div>
                         </div>
                 </form>
             </div>
         </div>
 
-        <script>
-            var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-            var alertTrigger = document.getElementById('liveAlertBtn')
-            
-            function alert(message, type) {
-            var wrapper = document.createElement('div')
-            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-            
-            alertPlaceholder.append(wrapper)
-            }
-            
-            if (alertTrigger) {
-            alertTrigger.addEventListener('click', function () {
-                alert('El pago se ha hecho con éxito con éxito.', 'success')
-            })
-            }
-            </script>
 
 </body>
 
