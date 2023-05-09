@@ -1,53 +1,98 @@
-var form = document.getElementById("myForm");
-// Agrega un controlador de eventos para el evento "submit"
-document.addEventListener("submit", function (event) {
-  // Cancela el envío del formulario
-  event.preventDefault();
 
-  // Obtiene los valores de los campos
-  var nombre = document.getElementsByName("nombre")[0].value;
-  var psw = document.getElementsByName("psw")[0].value;
-  var name = document.getElementById("nombre");
-  var pswStyle = document.getElementById("psw");
-  //Esto para Levantar Span De error
-  var span = document.getElementById("mi-span");
-  var spanPSW = document.getElementById("mispan2");
-  var spanCaracteres = document.getElementById("mispan3")
-  // Realiza las validaciones
-    
-  if (nombre === "") {
-    spanCaracteres.style.display = "none";
-    span.style.display = "flex"; //Muestra el mensaje de error
-    span.style.color = "red"; //Genera la letra en rojo
-    name.style.border = '1px solid red' //Agregar El borde Rojo
-    return false;
-  } else {
-      console.log("entra");
-      span.style.display = "none"; //Quita el mensaje de error
-      console.log(nombre.length);
-      if(nombre.length <= 5) {
-        spanCaracteres.style.display = "flex";
-        spanCaracteres.style.color = "red"
-      }else {
-        spanCaracteres.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener todos los elementos de entrada
+  const inputs = document.querySelectorAll("input");
+  // Agregar el event listener para el evento 'input' a cada elemento de entrada
+  inputs.forEach(function (input) {
+    input.addEventListener("input", function () {
+      validateInput(this);
+    });
+  });
+
+  let nameBool = false;
+  let passBool = false;
+
+  const myForm = document.getElementById("myForm");
+  // Agregar el event listener para el evento 'submit' al formulario
+  myForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evitar el envío del formulario por defecto
+    console.log(event);
+
+    // Validar todos los campos de entrada en el formulario
+    inputs.forEach(function (input) {
+      validateInput(input);
+    });
+
+
+    if (nameBool == true && passBool == true) {
+      // Si no hay errores, puedes enviar el formulario aquí
+      alert("El formulario se envió correctamente.");
+      this.submit();
+    }
+  });
+
+
+  // Función para validar un campo de entrada específico
+  function validateInput(input) {
+
+    var inputValue = input.value;
+    var inputName = input.name;
+
+
+    var errcarcter = document.getElementById("errcarc")
+    var errnombre = document.getElementById("errnom");
+    var names = document.getElementById("nombre");
+    if (inputName == 'nombre') {
+
+      let largo = inputValue.length
+
+      if (largo == 0) {
+        errcarcter.style.display = 'none';
+        errnombre.style.display = "flex";
+        errnombre.style.color = 'red';
+        names.style.border = '1px solid red';
+
+        return false;
+      } else {
+        errnombre.style.display = "none";
+        names.style.border = "transparent";
       }
-    
-    name.style.border = 'transparent' //Vuelve transparente el borde 
-    document.getElementsByName("nombre")[0].classList.remove("input-error");
+
+      if (largo < 20) {
+        nameBool = false
+        errcarcter.style.display = 'flex';
+        errcarcter.style.color = 'red';
+        names.style.border = '1px solid red';
+
+        return false;
+      } else {
+        nameBool = true
+        errcarcter.style.display = 'none';
+      }
+    }
+
+    var psws = document.getElementById("psw");
+    var spanPSW = document.getElementById("mispan2");
+    if (inputName == "psw") {
+      // Valida que la contraseña tenga al menos 8 caracteres y al menos una letra mayúscula
+      var pswRegex = /^(?=.*[A-Z]).{8,}$/;
+      if (!pswRegex.test(inputValue)) {
+        passBool = false
+        spanPSW.style.display = "flex"; //Muestra el mensaje de error
+        spanPSW.style.color = "red";//Genera la letra en rojo
+        psws.style.border = '1px solid red' //Agregar El borde Rojo
+        return false;
+      } else {
+        passBool = true
+        spanPSW.style.display = "none";//Quita el mensaje de error
+        psws.style.border = 'transparent'//Vuelve transparente el borde 
+      }
+    }
+
+
+
   }
 
-  // Valida que la contraseña tenga al menos 8 caracteres y al menos una letra mayúscula
-  var pswRegex = /^(?=.*[A-Z]).{8,}$/;
-  if (!pswRegex.test(psw)) {
-    console.log('én');
-    spanPSW.style.display = "flex"; //Muestra el mensaje de error
-    spanPSW.style.color = "red";//Genera la letra en rojo
-    pswStyle.style.border = '1px solid red' //Agregar El borde Rojo
-    return false;
-  }else{
-    spanPSW.style.display = "none";//Quita el mensaje de error
-    pswStyle.style.border = 'transparent'//Vuelve transparente el borde 
-  }
-  // Si todo está bien, envía el formulario
-  form.submit();
 });
+
+

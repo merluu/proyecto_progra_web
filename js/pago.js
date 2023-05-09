@@ -8,8 +8,33 @@ document.addEventListener("DOMContentLoaded", function () {
             validateInput(this);
         });
     });
+    let cvvBool = false;
+    let cardNumeberBool = false;
+    let cardNameBool = false
 
 
+        // Escucha el evento 'submit' del formulario y realiza la validación antes de enviarlo
+    // Obtener el formulario
+    const myForm = document.getElementById("myForm");
+
+    // Agregar el event listener para el evento 'submit' al formulario
+    myForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+        console.log(event);
+
+        // Validar todos los campos de entrada en el formulario
+        inputs.forEach(function (input) {
+            validateInput(input);
+        });
+
+        // Comprobar si hay algún campo de entrada con error
+        var invalidInputs = document.querySelectorAll(".is-invalid");
+        if (cvvBool == true && cardNameBool == true && cardNumeberBool == true) {
+            // Si no hay errores, puedes enviar el formulario aquí
+            alert("El formulario se envió correctamente.");
+            this.submit();
+        }
+    });
 
     // Función para validar un campo de entrada específico
     function validateInput(input) {
@@ -105,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        var errorcity = document.getElementById(' errcit');
+        var errorcity = document.getElementById('errcit');
         var citys = document.getElementById("city");
         if (inputName == 'city') {
 
@@ -124,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-        var errorcode = document.getElementById(' errcod');
+        var errorcode = document.getElementById('errcod');
         var codes = document.getElementById("code");
         if (inputName == 'code') {
 
@@ -168,11 +193,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (largo < 20) {
+                cardNameBool = false
                 errcarnlenghts.style.display = 'flex';
                 errcarnlenghts.style.color = 'red';
                 cardnames.style.border = '1px solid red';
                 return false;
             } else {
+                cardNameBool = true
                 errcarnlenghts.style.display = 'none';
             }
         }
@@ -203,11 +230,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (largo < 16) {
+                cardNumeberBool = false;
                 errnumclenghts.style.display = 'flex';
                 errnumclenghts.style.color = 'red';
                 cardnumbers.style.border = '1px solid red';
                 return false;
             } else {
+                cardNumeberBool = true;
                 errnumclenghts.style.display = 'none';
             }
         }
@@ -289,11 +318,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             if (largo < 3) {
+                cvvBool = false
                 errcvvs.style.display = 'flex';
                 errcvvs.style.color = 'red';
                 cvvs.style.border = '1px solid red';
                 return false;
             } else {
+                cvvBool = true
                 errcvvs.style.display = 'none';
                 cvvs.style.border = 'transparent';
             }
@@ -305,26 +336,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // Escucha el evento 'submit' del formulario y realiza la validación antes de enviarlo
-    // Obtener el formulario
-    const myForm = document.getElementById("myForm");
 
-    // Agregar el event listener para el evento 'submit' al formulario
-    myForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar el envío del formulario por defecto
-        console.log(event);
-
-        // Validar todos los campos de entrada en el formulario
-        inputs.forEach(function (input) {
-            validateInput(input);
-        });
-
-        // Comprobar si hay algún campo de entrada con error
-        var invalidInputs = document.querySelectorAll(".is-invalid");
-        if (invalidInputs.length === 0) {
-            // Si no hay errores, puedes enviar el formulario aquí
-            alert("El formulario se envió correctamente.");
-            this.submit();
-        }
-    });
 });
