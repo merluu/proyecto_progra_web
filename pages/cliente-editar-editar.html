@@ -8,27 +8,38 @@
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/jquery.min.js"></script>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/cliente-inicio.css">
+  <link rel="stylesheet" href="../css/border.css">
+  <script src="../js/cliente_editar_editar.js"></script>
+  <script src="../js/jquery.js"></script>
 
-  <title> Cliente - Editar</title>
+
+  <title> Editar Cliente</title>
+
+  <style>
+    body {
+      background-image: url("../imagenes/fondo.jpg");
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+
+    .tarjeta {
+      background-image: url("../imagenes/fondo.jpg");
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+  </style>
 </head>
-
-<style>
-  body {
-    background-image: url("../imagenes/fondo.jpg");
-  }
-</style>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand .clearfix" href="index.html">
         <img src="../imagenes/game.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill" id="logo">
         <label class="form-check-label" for="logo">Gameflix</label>
       </a>
     </div>
     <a class="navbar-brand" href="carrito.html" style="margin-right: 10px;" data-toggle="tooltip"
-      data-placement="bottom" title="Carrito">
+      data-placement="bottom" title="carrito de compras">
       <img src="../imagenes/carrito.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
     <a class="navbar-brand" href="sesion.html" style="margin-right: 10px;" data-toggle="tooltip" data-placement="bottom"
@@ -36,7 +47,6 @@
       <img src="../imagenes/login.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
   </nav>
-
   <nav class="navbar navbar-expand-sm bg-danger navbar-danger">
     <div class="container-fluid">
       <a class="navbar-brand" style="color: #fff" href="index.html">Inicio</a>
@@ -69,74 +79,56 @@
       <img src="../imagenes/whatsapp_icon.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
     </a>
   </nav>
-
   <hr>
   <div align="center">
-    <h2 style="color: white;">Editar Clientes </h2>
+    <h2 style="color: white;">Editar Clientes</h2>
   </div>
   <form action="/action_page.php" style="border:1px solid #ccc">
-    <table class="table">
-      <thead>
-        <tr class="table-light">
-          <th scope="col">Run</th>
-          <th scope="col">Nombres</th>
-          <th scope="col">Apellidos</th>
-          <th scope="col">Fecha Nacimiento</th>
-          <th scope="col">Correo</th>
-          <th scope="col">Editar</th>
-        </tr>
-      </thead>
-      <tbody class="text-white">
-        <tr>
-          <th contenteditable="true" scope="row">19456234-4</th>
-          <td contenteditable="true">Mark Ernesto</td>
-          <td contenteditable="true">Gonzalez Tapia</td>
-          <td contenteditable="true">26-02-1989</td>
-          <td contenteditable="true">mako@hotmail.cl</td>
-          <td align="center">
-            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">
-          </td>
-        </tr>
-        <tr>
-          <th contenteditable="true" scope="row">17987345-8</th>
-          <td contenteditable="true">Ignacia Gabriela</td>
-          <td contenteditable="true">Lopez Flores</td>
-          <td contenteditable="true">27-09-2005</td>
-          <td contenteditable="true">gabi@gmail.com</td>
-          <td align="center">
-            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
-          </td>
-        </tr>
-        <tr>
-        <tr>
-          <th contenteditable="true" scope="row">17987345-8</th>
-          <td contenteditable="true">Carlos Fernando</td>
-          <td contenteditable="true">Perez Ulloa</td>
-          <td contenteditable="true">11-08-2000</td>
-          <td contenteditable="true">coto@hotmail</td>
-          <td align="center">
-            <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">
-          </td>
-        </tr>
-        </tr>
-        <tr>
-        <tr>
-          <th contenteditable="true" scope="row">17987345-8</th>
-          <td contenteditable="true">Jacobo Gabriel</td>
-          <td contenteditable="true">Landaeta Vera</td>
-          <td contenteditable="true">11-08-2000</td>
-          <td contenteditable="true">j.landa@duocuc.cl</td>
-          <td align="center">
-            <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">
-          </td>
-        </tr>
-        </tr>
-      </tbody>
 
-    </table>
-    <div align="center">
-      <div class="clearfix">
-        <a type="button" href="cliente-editar-editar.html" class="btn btn-primary" id="id-reg">Editar</a>
+    <div class="container">
+
+      <div class="mb-3 mt-3">
+        <label for="rut" class="form-label">Run:</label>
+        <input type="number" class="form-control" id="id-Run" name="run" value="180682473" disabled>
+        <p id="id-msjrun" style="color:red"></p>
+      </div>
+
+      <label for="email" class="form-label">Nombres:</label>
+      <div class="input-group">
+        <span class="input-group-text">Primer nombre</span>
+        <input type="text" aria-label="First name" class="form-control" id="id-pnom" required>
+        <span class="input-group-text"> Segundo nombre</span>
+        <input type="text" aria-label="Last name" class="form-control" id="id-pape" required>
+      </div>
+      <p id="id-msjna" style="color:red"></p>
+      <br>
+      <label for="email" class="form-label">Apellidos:</label>
+      <div class="input-group">
+        <span class="input-group-text">Primer Apellido</span>
+        <input type="text" aria-label="First name" class="form-control" id="id-pape" required>
+        <span class="input-group-text"> Segundo Apellido</span>
+        <input type="text" aria-label="Last name" class="form-control" id="id-sape" required>
+      </div>
+      <p id="id-msjapes" style="color:red"></p>
+
+      <div class="mb-3 mt-3">
+        <label for="fecha" class="form-label">Fecha Nacimiento:</label>
+        <input type="date" class="form-control" id="id-fecha" placeholder="Ingrese fecha de Nacimiento" name="fecha"
+          required>
+      </div>
+      <p id="id-msjfech" style="color:red"></p>
+
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="idEmail" placeholder="Ingrese email " name="email" id="idEmail" required>
+      </div>
+      <p id="id-msjc" style="color:red"></p>
+      <br>
+
+      <div align="center">
+        <div class="clearfix">
+          <button type="button" class="btn btn-primary" id="id-agreg" onclick="validarCampos()">Agregar</button>
+        </div>
       </div>
     </div>
   </form>
