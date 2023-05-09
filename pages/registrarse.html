@@ -73,26 +73,31 @@
         <h1>Registrarse</h1>
         <p>Por favor, rellene este formulario para crear una cuenta.</p>
         <hr>
+        <label for="rut"><b>Rut</b></label>
+        <input type="text" placeholder="Ingrese Rut" name="rut" id="id-rut"  required>
         <!--este es un parrafo vació para cambiarle el valor con el jqry con el evento oninput a la caja del rut -->
         <p id="id-msj" style="color:red"></p>
-        <label for="rut"><b>Rut</b></label>
-        <input type="text" placeholder="Ingrese Rut" name="rut" id="id-rut" oninput="validarRut()" required>
 
         <label for="nombre"><b>Nombre</b></label>
-        <input type="text" placeholder="Ingrese nombre" name="nombre" required>
+        <input type="text" placeholder="Ingrese nombre" id="id-nombre" name="nombre" required>
+        <p id="id-msjn" style="color:red"></p>
 
         <label for="apellido"><b>Apellido</b></label>
-        <input type="text" placeholder="Ingrese apellido" name="apellido" required>
+        <input type="text" placeholder="Ingrese apellido" id="id-apellido" name="apellido" required>
+        <p id="id-msja" style="color:red"></p>
 
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Ingrese Email" name="email" required>
+        <input type="text" placeholder="Ingrese Email" name="email" id="idEmail" required>
+        <p id="id-msjc" style="color:red"></p>
 
         <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="Ingrese contraseña" name="psw" required>
+        <input type="password" placeholder="Ingrese contraseña" id="idcontraseña1" name="psw" required>
 
         <label for="psw-repeat"><b>Repita contraseña</b></label>
-        <input type="password" placeholder="Repita contraseña" name="psw-repeat" required>
+        <input type="password" placeholder="Repita contraseña" id="idcontraseña2" name="psw-repeat" required>
+        <p id="id-msjp" style="color:red"></p>
+        
 
         <label>
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame
@@ -102,7 +107,7 @@
 
         <div class="clearfix">
           <button type="button" class="cancelbtn" id="id-can">Cancelar</button>
-          <button type="button" class="signupbtn" id="id-reg">Registrarse</button>
+          <button type="button" class="signupbtn" id="id-reg" onclick="validarCampos()">Registrarse</button>
 
         </div>
       </div>
